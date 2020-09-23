@@ -1,0 +1,11 @@
+1)Change config file: sudo nano /etc/inetd.conf
+2)Input 2 string in the end: 
+# HTTP proxy
+1050 stream tcp nowait nobody /bin/nc nc localhost 1055
+3)Save file and exit
+4)Open two terminals:
+in the first input:sudo  netcat -l localhost 1055
+"-l"-Means that this port listens. 
+in the second input: sudo netcat  localhost 1050
+Your port should be more than 1024, because <1024 is system port.
+5)Write your msg in 1050 and your msg will appear in 1055.
