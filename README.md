@@ -3,4 +3,6 @@
 
 14, 17 done 30.09 - 4 points
 
-Total 6 points
+2,18 done 5.10 - 4 points
+
+Total 10/40 points
