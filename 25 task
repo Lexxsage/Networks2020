@@ -1,0 +1,6 @@
+sudo wireshark 
+filter - http. request. method == "POST"
+
+site http://1plus1tv.ru/
+
+see user and password
