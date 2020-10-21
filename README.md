@@ -1,6 +1,6 @@
 # Networks2020
 
-10 done 23.09- 2points
+10 done 23.09 - 2 points
 
 14, 17 done 30.09 - 4 points
 
