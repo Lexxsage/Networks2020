@@ -5,7 +5,7 @@ import sys
 
 buffer_size = 4096
 delay = 0.0001
-forward_to = ('localhost', 5555)
+forward_to = ('localhost', 5556)
 
 
 class Forward:
@@ -84,7 +84,7 @@ class TheServer:
 
 
 if __name__ == '__main__':
-        server = TheServer('localhost', 9090)
+        server = TheServer('localhost', 9091)
         try:
             server.main_loop()
         except KeyboardInterrupt:

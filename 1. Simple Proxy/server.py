@@ -1,7 +1,7 @@
 import socket
 import time
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.bind(('localhost', 5555))
+sock.bind(('localhost', 5556))
 sock.listen(10)
 srvmsg = 'World!'
 while True:
