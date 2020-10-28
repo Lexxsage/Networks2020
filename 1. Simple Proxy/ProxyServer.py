@@ -64,7 +64,7 @@ class TheServer:
         else:
             print("Can't establish connection with remote server.",)
             print("Closing connection with client side", clientaddr)
-            clientsock.close()
+            clientsock.close()/home/alex/gym-duckietown/manual_control.py
 
     def on_close(self):
 
