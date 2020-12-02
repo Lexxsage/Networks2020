@@ -9,7 +9,7 @@ import time
 
 def small_stealer(packet):
     packet_bytes = bytes(packet)
-    begin = packet_bytes.find('\x89PNG'.encode())
+    begin = packet_bytes.find('\x89PNG')
     ### PNG ###
     if begin > -1:  # if found PNG beginning
         print ('Found \'\x89PNG\' at', begin)
