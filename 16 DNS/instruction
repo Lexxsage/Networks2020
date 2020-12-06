@@ -27,9 +27,9 @@ sudo nano /etc/bind/named.conf.local
 // organization
 //include "/etc/bind/zones.rfc1918";
 
-zone "zone2.com" IN {
+zone "zone1.com" IN {
         type master;
-        file "zone2.com.zone";
+        file "etc/bind/zone1.zone";
 };
 
 --------------------------------------------------
@@ -37,7 +37,7 @@ sudo nano /var/cache/bind/zone2.com.zone
 //This is a zone file for private network.
 $TTL 7200
 ;Start of authority	- используется для указания на новую зону
-@   IN SOA  zone2. alex.zone2. (
+@ IN SOA zone1.com alex.zone1.com (
 			    174		; Serial
 			 604800		; Refresh
 			  86400		; Retry
@@ -46,10 +46,10 @@ $TTL 7200
 ;
 ;заголовочная запись была сверху, теперь сервера имён (NS - name server)
 ;Authoritative name server	-  Адрес узла, отвечающего за доменную зону     
-     IN NS zone2.
-zone2.  IN  A     192.168.1.5
-me      IN  CNAME zone2.
-;me - альтернативное имя для zone1
+@ IN NS server
+server  IN  A 192.168.1.5
+me      IN  CNAME server
+;me - альтернативное имя для server
 post1   IN  MX  11     imap.yandex.ru.
         IN  A 77.88.21.125
         IN  WKS 77.88.21.125     tcp imap
@@ -82,5 +82,7 @@ Address:	::1#53
 
 Name:	server.zone2.com
 Address: 192.168.1.5
+----------------------------------------------------------------------------
+$ dig @ns.mail.ru mail.ru mx
 
 
